@@ -77,3 +77,5 @@ BOARD_EGL_CFG ?= device/generic/common/gpu/egl_mesa.cfg
 endif
 
 BOARD_KERNEL_CMDLINE := root=/dev/ram0 androidboot.hardware=$(TARGET_PRODUCT)
+
+ZIP_OPTIMIZATION_NO_INTEGRITY := true

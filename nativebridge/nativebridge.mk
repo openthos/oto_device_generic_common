@@ -23,8 +23,10 @@ PRODUCT_PROPERTY_OVERRIDES := \
     ro.dalvik.vm.isa.arm=x86 \
     ro.enable.native.bridge.exec=1 \
 
+ifeq ($(wildcard vendor/intel/houdini/houdini.mk),)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES := ro.dalvik.vm.native.bridge=libnb.so
 
 PRODUCT_PACKAGES := libnb
+endif
 
 $(call inherit-product-if-exists,vendor/intel/houdini/houdini.mk)
