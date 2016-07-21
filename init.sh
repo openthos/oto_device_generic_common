@@ -395,7 +395,7 @@ PRODUCT=$(cat $DMIPATH/product_name)
 # import cmdline variables
 for c in `cat /proc/cmdline`; do
 	case $c in
-		androidboot.hardware=*)
+		BOOT_IMAGE=*|iso-scan/*|*.*=*)
 			;;
 		*=*)
 			eval $c
