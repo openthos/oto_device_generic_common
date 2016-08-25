@@ -57,6 +57,7 @@ PRODUCT_PACKAGES := \
     tablet-mode \
     v86d \
     wacom-input \
+    Launcher3
 
 PRODUCT_PACKAGES += \
     libwpa_client \
