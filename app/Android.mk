@@ -16,7 +16,6 @@ include $$(CLEAR_VARS)
 
 LOCAL_LIBS := $$(shell zipinfo -1 $$(LOCAL_PATH)/$(1) | grep ^lib/ | grep -v /$$$$)
 
-LOCAL_OVERRIDES_PACKAGES := Gallery2
 LOCAL_MODULE := $$(basename $(1))
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
