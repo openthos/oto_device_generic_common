@@ -17,12 +17,32 @@ on init
     mkdir /storage/emulated 0555 root root
     mkdir /mnt/media_rw/usb0 0700 media_rw media_rw
     mkdir /storage/usb0 0700 root root
+    mkdir /storage/usb0_1 0700 root root
+    mkdir /storage/usb0_2 0700 root root
+    mkdir /storage/usb0_3 0700 root root
+    mkdir /storage/usb0_4 0700 root root
+    mkdir /storage/usb0_5 0700 root root
     mkdir /mnt/media_rw/usb1 0700 media_rw media_rw
     mkdir /storage/usb1 0700 root root
+    mkdir /storage/usb1_1 0700 root root
+    mkdir /storage/usb1_2 0700 root root
+    mkdir /storage/usb1_3 0700 root root
+    mkdir /storage/usb1_4 0700 root root
+    mkdir /storage/usb1_5 0700 root root
     mkdir /mnt/media_rw/usb2 0700 media_rw media_rw
     mkdir /storage/usb2 0700 root root
+    mkdir /storage/usb2_1 0700 root root
+    mkdir /storage/usb2_2 0700 root root
+    mkdir /storage/usb2_3 0700 root root
+    mkdir /storage/usb2_4 0700 root root
+    mkdir /storage/usb2_5 0700 root root
     mkdir /mnt/media_rw/usb3 0700 media_rw media_rw
     mkdir /storage/usb3 0700 root root
+    mkdir /storage/usb3_1 0700 root root
+    mkdir /storage/usb3_2 0700 root root
+    mkdir /storage/usb3_3 0700 root root
+    mkdir /storage/usb3_4 0700 root root
+    mkdir /storage/usb3_5 0700 root root
     mkdir /mnt/media_rw/sdcard1 0700 media_rw media_rw
     mkdir /storage/sdcard1 0700 root root
 
