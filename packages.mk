@@ -18,7 +18,6 @@
 
 PRODUCT_PACKAGES := \
     BasicSmsReceiver \
-    Development \
     Galaxy4 \
     GlobalTime \
     HoloSpiralWallpaper \
@@ -78,6 +77,4 @@ PRODUCT_PACKAGES += \
 
 # Third party apps
 PRODUCT_PACKAGES += \
-    CMFileManager \
     Superuser \
-    TSCalibration2 \
