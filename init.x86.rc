@@ -15,6 +15,22 @@ on early-init
 on init
     mkdir /mnt/shell/emulated 0700 shell shell
     mkdir /storage/emulated 0555 root root
+    mkdir /storage/disk0 0700 root root
+    mkdir /storage/disk1 0700 root root
+    mkdir /storage/disk2 0700 root root
+    mkdir /storage/disk3 0700 root root
+    mkdir /storage/disk4 0700 root root
+    mkdir /storage/disk5 0700 root root
+    mkdir /storage/disk6 0700 root root
+    mkdir /storage/disk7 0700 root root
+    mkdir /storage/disk8 0700 root root
+    mkdir /storage/disk9 0700 root root
+    mkdir /storage/disk10 0700 root root
+    mkdir /storage/disk11 0700 root root
+    mkdir /storage/disk12 0700 root root
+    mkdir /storage/disk13 0700 root root
+    mkdir /storage/disk14 0700 root root
+    mkdir /storage/disk15 0700 root root
     mkdir /mnt/media_rw/usb0 0700 media_rw media_rw
     mkdir /storage/usb0 0700 root root
     mkdir /storage/usb0_1 0700 root root
