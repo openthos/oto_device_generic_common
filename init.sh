@@ -116,7 +116,7 @@ function init_uvesafb()
 function init_hal_gralloc()
 {
 	case "$(cat /proc/fb | head -1)" in
-		0*inteldrmfb|0*radeondrmfb|0*nouveaufb)
+		0*inteldrmfb|0*radeondrmfb|0*nouveaufb|0*amdgpudrmfb)
 			set_property ro.hardware.gralloc drm
 			set_drm_mode
 			;;
