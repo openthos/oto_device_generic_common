@@ -22,6 +22,7 @@ PRODUCT_PACKAGES := \
     GlobalTime \
     HoloSpiralWallpaper \
     OtoLauncher\
+    OtoCompress \
     LiveWallpapers \
     LiveWallpapersPicker \
     MagicSmokeWallpapers \
