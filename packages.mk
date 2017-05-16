@@ -84,4 +84,5 @@ PRODUCT_PACKAGES += \
 
 # Third party apps
 PRODUCT_PACKAGES += \
+    Fennec \
     Superuser \
