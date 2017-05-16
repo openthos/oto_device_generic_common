@@ -374,6 +374,9 @@ function do_bootcomplete()
 			alsa_amixer -c $c set 'Internal Mic Boost' 3
 		fi
 	done
+
+	#disable app
+	/system/bin/pm disable com.android.browser
 }
 
 function do_hci()
