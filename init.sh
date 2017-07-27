@@ -316,7 +316,7 @@ function do_bootcomplete()
 	# FIXME: autosleep works better on i965?
 	[ "$(getprop debug.mesa.driver)" = "i965" ] && setprop debug.autosleep 1
 
-	lsmod | grep -e brcmfmac && setprop wlan.no-unload-driver 1
+	lsmod | grep -e brcmfmac -e rtl8723be && setprop wlan.no-unload-driver 1
 
 	case "$PRODUCT" in
 		1866???|1867???|1869???) # ThinkPad X41 Tablet
