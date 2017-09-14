@@ -46,11 +46,11 @@ PRODUCT_PACKAGES := \
     libhuaweigeneric-ril \
     lights.default \
     make_ext4fs \
-    parted \
     powerbtnd \
     scp \
     sensors.hsb \
     sftp \
+    sgdisk \
     ssh \
     sshd \
     su \
