@@ -21,12 +21,19 @@ PRODUCT_PACKAGES := \
     Galaxy4 \
     GlobalTime \
     HoloSpiralWallpaper \
-    OtoLauncher\
-    OtoCompress \
     LiveWallpapers \
     LiveWallpapersPicker \
     MagicSmokeWallpapers \
     NotePad \
+    OtoAppStore \
+    OtoCompress \
+    OtoFileManager \
+    OtoKeyboardMap \
+    OtoLauncher\
+    OtoOta \
+    OtoPinyinIME \
+    OtoTerminal \
+    OtoVirtualGUI \
     PhaseBeam \
     PinyinIME \
     Provision \
@@ -56,9 +63,7 @@ PRODUCT_PACKAGES := \
     su \
     tablet-mode \
     v86d \
-    wacom-input \
-    Launcher3 \
-    OtoKeyboardMap
+    wacom-input
 
 PRODUCT_PACKAGES += \
     libwpa_client \
