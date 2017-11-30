@@ -45,6 +45,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ppp/peers/gprs:system/etc/ppp/peers/gprs \
     $(LOCAL_PATH)/media_codecs.xml:system/etc/media_codecs.xml \
     $(LOCAL_PATH)/media_profiles.xml:system/etc/media_profiles.xml \
+    $(LOCAL_PATH)/gnupg/home/.gnupg/gpg.conf:system/gnupg/home/.gnupg/gpg.conf \
+    $(LOCAL_PATH)/gnupg/home/.gnupg/pubring.gpg:system/gnupg/home/.gnupg/pubring.gpg \
+    $(LOCAL_PATH)/gnupg/home/.gnupg/random_seed:system/gnupg/home/.gnupg/random_seed \
+    $(LOCAL_PATH)/gnupg/home/.gnupg/secring.gpg:system/gnupg/home/.gnupg/secring.gpg \
+    $(LOCAL_PATH)/gnupg/home/.gnupg/trustdb.gpg:system/gnupg/home/.gnupg/trustdb.gpg \
+    $(LOCAL_PATH)/gnupg/usr/bin/gpg:system/gnupg/usr/bin/gpg \
+    $(LOCAL_PATH)/gnupg/usr/lib/libiconv.so:system/gnupg/usr/lib/libiconv.so \
+    $(LOCAL_PATH)/gnupg/usr/libexec/gnupg/gpgkeys_finger:system/gnupg/usr/libexec/gnupg/gnugpgkeys_finger \
     device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
