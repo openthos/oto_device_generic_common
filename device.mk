@@ -45,14 +45,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ppp/peers/gprs:system/etc/ppp/peers/gprs \
     $(LOCAL_PATH)/media_codecs.xml:system/etc/media_codecs.xml \
     $(LOCAL_PATH)/media_profiles.xml:system/etc/media_profiles.xml \
-    $(LOCAL_PATH)/gnupg/home/.gnupg/gpg.conf:system/gnupg/home/.gnupg/gpg.conf \
-    $(LOCAL_PATH)/gnupg/home/.gnupg/pubring.gpg:system/gnupg/home/.gnupg/pubring.gpg \
-    $(LOCAL_PATH)/gnupg/home/.gnupg/random_seed:system/gnupg/home/.gnupg/random_seed \
-    $(LOCAL_PATH)/gnupg/home/.gnupg/secring.gpg:system/gnupg/home/.gnupg/secring.gpg \
-    $(LOCAL_PATH)/gnupg/home/.gnupg/trustdb.gpg:system/gnupg/home/.gnupg/trustdb.gpg \
-    $(LOCAL_PATH)/gnupg/usr/bin/gpg:system/bin/gpg \
-    $(LOCAL_PATH)/gnupg/usr/lib/libiconv.so:system/lib64/libiconv.so \
-    $(LOCAL_PATH)/gnupg/usr/libexec/gnupg/gpgkeys_finger:system/libexec/gnupg/gnugpgkeys_finger \
+    device/generic/gnupg/home/.gnupg/gpg.conf:system/gnupg/home/.gnupg/gpg.conf \
+    device/generic/gnupg/home/.gnupg/pubring.gpg:system/gnupg/home/.gnupg/pubring.gpg \
+    device/generic/gnupg/home/.gnupg/random_seed:system/gnupg/home/.gnupg/random_seed \
+    device/generic/gnupg/home/.gnupg/secring.gpg:system/gnupg/home/.gnupg/secring.gpg \
+    device/generic/gnupg/home/.gnupg/trustdb.gpg:system/gnupg/home/.gnupg/trustdb.gpg \
+    device/generic/gnupg/usr/bin/gpg:system/bin/gpg \
+    device/generic/gnupg/usr/lib/libiconv.so:system/lib64/libiconv.so \
+    device/generic/gnupg/usr/libexec/gnupg/gpgkeys_finger:system/libexec/gnupg/gnugpgkeys_finger \
     device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
