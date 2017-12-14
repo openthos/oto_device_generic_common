@@ -92,5 +92,9 @@ PRODUCT_PACKAGES += \
 # Third party apps
 PRODUCT_PACKAGES += \
     Superuser \
+    Editor \
+    Vlc \
     Fennec \
+    Foto \
+    Mopria \
     OtoWinRec \
