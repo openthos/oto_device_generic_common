@@ -19,6 +19,7 @@ PRODUCT_DIR := $(dir $(lastword $(filter-out device/common/%,$(filter device/%,$
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.ril.hsxpa=1 \
     ro.ril.gprsclass=10 \
+    net.hostname=OPENTHOS \
     keyguard.no_require_sim=true \
     ro.com.android.dataroaming=true \
     media.sf.hwaccel=1 \
@@ -80,6 +81,12 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.xml:system/etc/permissions/android.software.sip.xml \
     $(foreach f,$(wildcard $(LOCAL_PATH)/alsa/*),$(f):$(subst $(LOCAL_PATH),system/etc,$(f))) \
     $(foreach f,$(wildcard $(LOCAL_PATH)/idc/*.idc $(LOCAL_PATH)/keylayout/*.kl),$(f):$(subst $(LOCAL_PATH),system/usr,$(f)))
+
+PRODUCT_COPY_FILES += \
+    bootable/newinstaller/replace/bootanimation.zip:$(PRODUCT_OUT)/system/media/bootanimation.zip \
+    $(LOCAL_PATH)/prebuilt-app/Fennec/fennec_initdata.tar.bz2:$(PRODUCT_OUT)/system/opt/fennec_initdata.tar.bz2 \
+    packages/apps/Printer/component_printer.tar.gz:$(PRODUCT_OUT)/system/opt/component_printer.tar.gz \
+    packages/apps/OtoFileManager/sea.tar.bz:$(PRODUCT_OUT)/system/opt/sea.tar.bz \
 
 PRODUCT_TAGS += dalvik.gc.type-precise
 
