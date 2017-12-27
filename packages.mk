@@ -32,6 +32,7 @@ PRODUCT_PACKAGES := \
     OtoLauncher\
     OtoOta \
     OtoPinyinIME \
+    OtoPhoto \
     OtoTerminal \
     OtoVirtualGUI \
     PhaseBeam \
