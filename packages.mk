@@ -28,7 +28,7 @@ PRODUCT_PACKAGES := \
     OtoAppStore \
     OtoCompress \
     OtoFileManager \
-    OtoGreenify  \
+    OtoGreenify \
     OtoKeyboardMap \
     OtoLauncher\
     OtoOta \
