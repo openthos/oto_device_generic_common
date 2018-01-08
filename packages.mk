@@ -25,6 +25,7 @@ PRODUCT_PACKAGES := \
     LiveWallpapersPicker \
     MagicSmokeWallpapers \
     NotePad \
+    OtoAppOpsXposed \
     OtoAppStore \
     OtoCompress \
     OtoFileManager \
