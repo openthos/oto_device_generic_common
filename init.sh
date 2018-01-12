@@ -373,8 +373,8 @@ function do_bootcomplete()
 			alsa_amixer -c $c set Capture cap
 			alsa_amixer -c $c set PCM 100 unmute
 			alsa_amixer -c $c set SPO unmute
-			alsa_amixer -c $c set 'Mic Boost' 3
-			alsa_amixer -c $c set 'Internal Mic Boost' 3
+			alsa_amixer -c $c set 'Mic Boost' 0
+			alsa_amixer -c $c set 'Internal Mic Boost' 0
 		fi
 	done
 
