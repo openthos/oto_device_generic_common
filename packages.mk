@@ -27,6 +27,7 @@ PRODUCT_PACKAGES := \
     NotePad \
     OtoAppOpsXposed \
     OtoAppStore \
+    OtoCloudService \
     OtoCompress \
     OtoFileManager \
     OtoGreenify \
