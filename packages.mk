@@ -30,13 +30,13 @@ PRODUCT_PACKAGES := \
     OtoCloudService \
     OtoCompress \
     OtoFileManager \
-    OtoGreenify \
     OtoKeyboardMap \
     OtoLauncher\
     OtoOta \
     OtoPinyinIME \
     OtoPhoto \
     OtoRecorder \
+    OtoTaskManager \
     OtoTerminal \
     OtoVirtualGUI \
     PhaseBeam \
