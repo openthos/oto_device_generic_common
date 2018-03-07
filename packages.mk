@@ -103,3 +103,5 @@ PRODUCT_PACKAGES += \
     Foto \
     Mopria \
     OtoWinRec \
+    Termux \
+    TermuxStyling \
