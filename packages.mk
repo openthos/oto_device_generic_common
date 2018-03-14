@@ -105,3 +105,6 @@ PRODUCT_PACKAGES += \
     OtoWinRec \
     Termux \
     TermuxStyling \
+
+PRODUCT_PACKAGES += \
+    sf_helper

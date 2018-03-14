@@ -225,3 +225,6 @@ on property:persist.sys.nativebridge=1
 
 on property:persist.sys.nativebridge=0
     stop nativebridge
+
+on property:sys.sf.lcd_density.recommend=*
+    exec /system/bin/sf_helper
