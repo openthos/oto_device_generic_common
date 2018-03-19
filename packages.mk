@@ -30,6 +30,7 @@ PRODUCT_PACKAGES := \
     OtoCloudService \
     OtoCompress \
     OtoFileManager \
+    OtoFileSelector \
     OtoKeyboardMap \
     OtoLauncher\
     OtoOta \
