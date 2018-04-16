@@ -121,8 +121,6 @@ on boot
     # workaround for h.265 slowness
     setprop sys.media.vdec.drop 0
 
-    exec /system/bin/sf_helper
-
 service wpa_supplicant /system/bin/wpa_supplicant -c/data/misc/wifi/wpa_supplicant.conf \
     -iwlan0 -Dnl80211 \
     -O/data/misc/wifi/sockets \
