@@ -12,6 +12,10 @@
 #include <signal.h>
 #include <cutils/log.h>
 #include <cutils/properties.h>
+#include <linux/fb.h>
+
+int get_resolution_from_fb(int *xres, int *yres);
+int get_model_from_prop(char *model);
 
 int main()
 {
@@ -24,6 +28,28 @@ int main()
     property_get("sys.sf.lcd_density.recommend", value, default_value);
     if (strcmp(value, default_value) == 0)
     {
+        int xres, yres;
+
+        if(get_model_from_prop(value) != 0)
+        {
+            return -1;
+        }
+
+        if(get_resolution_from_fb(&xres, &yres) != 0)
+        {
+            return -1;
+        }
+
+        if(strcmp(value, "THTF T Series") == 0 && xres == 1366 && yres == 768)
+        {
+            property_set("sys.sf.lcd_density.recommend", "120");
+        }
+
+        if(strcmp(value, "THTF T Series") == 0 && xres == 1920 && yres == 1080)
+        {
+            property_set("sys.sf.lcd_density.recommend", "160");
+        }
+
         return 0;
     }
 
@@ -62,4 +88,25 @@ int main()
     }
 
     return 0;
+}
+
+int get_resolution_from_fb(int *xres, int *yres)
+{
+    const char* fbpath = "/dev/graphics/fb0";
+    int fb = open(fbpath, O_RDONLY);
+    if (fb >= 0) {
+        struct fb_var_screeninfo vinfo;
+        if (ioctl(fb, FBIOGET_VSCREENINFO, &vinfo) == 0) {
+            *xres = vinfo.xres;
+            *yres = vinfo.yres;
+        } else return -1;
+    } else return -1;
+    close(fb);
+    return 0;
+}
+
+int get_model_from_prop(char *model)
+{
+    property_get("ro.product.model", model, "null");
+    return strcmp(model, "null") == 0 ? -1 : 0;
 }
