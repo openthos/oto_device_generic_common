@@ -37,7 +37,6 @@ PRODUCT_PACKAGES := \
     OtoPhoto \
     OtoPrivacyMan \
     OtoRecorder \
-    OtoTaskManager \
     OtoTerminal \
     OtoVirtualGUI \
     PhaseBeam \
@@ -99,6 +98,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Superuser \
     Editor \
+    Task \
     Vlc \
     Fennec \
     Foto \
