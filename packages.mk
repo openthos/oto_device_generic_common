@@ -17,7 +17,6 @@
 # Common packages for Android-x86 platform.
 
 PRODUCT_PACKAGES := \
-    AnalyticsService \
     BasicSmsReceiver \
     Development \
     Galaxy4 \
@@ -27,12 +26,9 @@ PRODUCT_PACKAGES := \
     LiveWallpapers \
     LiveWallpapersPicker \
     MagicSmokeWallpapers \
-    NotePad \
     PhaseBeam \
     PinyinIME \
     Provision \
-    RSSReader \
-    Taskbar \
     VisualizationWallpapers \
     WallpaperPicker \
     camera.x86 \
@@ -94,8 +90,3 @@ PRODUCT_PACKAGES += \
     libffmpeg_extractor \
     libffmpeg_omx \
     media_codecs_ffmpeg.xml
-
-# Third party apps
-PRODUCT_PACKAGES += \
-    Eleven \
-    TSCalibration2 \
