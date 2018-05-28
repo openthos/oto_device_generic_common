@@ -25,7 +25,6 @@ endif
 TARGET_PRELINK_MODULE := false
 TARGET_NO_KERNEL ?= false
 TARGET_NO_RECOVERY ?= true
-TARGET_EXTRA_KERNEL_MODULES := tp_smapi
 ifneq ($(filter efi_img,$(MAKECMDGOALS)),)
 TARGET_KERNEL_ARCH ?= x86_64
 endif
