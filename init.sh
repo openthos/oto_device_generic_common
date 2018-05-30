@@ -127,9 +127,6 @@ function init_hal_gralloc()
 			;;
 	esac
 
-	local card1=/sys/class/drm/card1/device/driver
-	[ -e $card1 ] && rmmod $(basename `readlink $card1`)
-
 	[ -n "$DEBUG" ] && set_property debug.egl.trace error
 }
 
