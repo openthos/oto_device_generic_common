@@ -106,6 +106,7 @@ PRODUCT_PACKAGES += \
     OtoWinRec \
     Termux \
     TermuxStyling \
+    WebViewGoogle \
 
 PRODUCT_PACKAGES += \
     sf_helper

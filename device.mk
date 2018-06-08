@@ -96,6 +96,7 @@ PRODUCT_AAPT_CONFIG := normal large xlarge mdpi hdpi
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
 DEVICE_PACKAGE_OVERLAYS := $(LOCAL_PATH)/overlay
+PRODUCT_PACKAGE_OVERLAYS := $(LOCAL_PATH)/prebuilt-app/WebViewGoogle/overlay
 
 # Get the firmwares
 $(call inherit-product,device/generic/firmware/firmware.mk)
