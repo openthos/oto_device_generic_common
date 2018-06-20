@@ -33,7 +33,6 @@ PRODUCT_PACKAGES := \
     OtoKeyboardMap \
     OtoLauncher\
     OtoOta \
-    OtoPinyinIME \
     OtoPhoto \
     OtoPrivacyMan \
     OtoRecorder \
@@ -102,11 +101,12 @@ PRODUCT_PACKAGES += \
     Vlc \
     Fennec \
     Foto \
+    GooglePinYin \
     Mopria \
-    OtoWinRec \
     Termux \
     TermuxStyling \
-    WebViewGoogle \
+    WebViewGoogle
+##  OtoWinRec \
 
 PRODUCT_PACKAGES += \
     sf_helper
