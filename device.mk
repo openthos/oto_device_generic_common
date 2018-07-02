@@ -39,6 +39,10 @@ PRODUCT_COPY_FILES := \
     $(if $(wildcard $(PRODUCT_DIR)excluded-input-devices.xml),$(PRODUCT_DIR),$(LOCAL_PATH)/)excluded-input-devices.xml:system/etc/excluded-input-devices.xml \
     $(if $(wildcard $(PRODUCT_DIR)init.$(TARGET_PRODUCT).rc),$(PRODUCT_DIR)init.$(TARGET_PRODUCT).rc,$(LOCAL_PATH)/init.x86.rc):root/init.$(TARGET_PRODUCT).rc \
     $(if $(wildcard $(PRODUCT_DIR)ueventd.$(TARGET_PRODUCT).rc),$(PRODUCT_DIR)ueventd.$(TARGET_PRODUCT).rc,$(LOCAL_PATH)/ueventd.x86.rc):root/ueventd.$(TARGET_PRODUCT).rc \
+    $(LOCAL_PATH)/de.robv.android.xposed.installer/conf/enabled_modules.list:root/de.robv.android.xposed.installer/conf/enabled_modules.list \
+    $(LOCAL_PATH)/de.robv.android.xposed.installer/conf/modules.list:root/de.robv.android.xposed.installer/conf/modules.list \
+    $(LOCAL_PATH)/de.robv.android.xposed.installer/shared_prefs/enabled_modules.xml:root/de.robv.android.xposed.installer/shared_prefs/enabled_modules.xml \
+    $(LOCAL_PATH)/de.robv.android.xposed.installer/enable_taskmanager.sh:root/enable_taskmanager.sh
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ppp/ip-up:system/etc/ppp/ip-up \
