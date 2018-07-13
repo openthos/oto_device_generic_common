@@ -34,6 +34,7 @@ PRODUCT_PACKAGES := \
     OtoLauncher\
     OtoOta \
     OtoPhoto \
+    OtoPinyinIME \
     OtoPrivacyMan \
     OtoRecorder \
     OtoTerminal \
