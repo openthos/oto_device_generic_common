@@ -38,7 +38,6 @@ PRODUCT_PACKAGES := \
     OtoPrivacyMan \
     OtoRecorder \
     OtoTerminal \
-    OtoVirtualGUI \
     PhaseBeam \
     PinyinIME \
     Provision \
