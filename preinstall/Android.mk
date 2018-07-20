@@ -6,8 +6,8 @@ LOCAL_PATH:= $(call my-dir)
 #LOCAL_SRC_FILES := preinstalled.list $(shell $(LOCAL_PATH)/loadapks.sh > /dev/null)
 #include $(BUILD_PREBUILT)
 
-#manager_apk := $(shell $(LOCAL_PATH)/loadapks.sh > /dev/null)
-manager_apk := $(patsubst $(LOCAL_PATH)/%,%,$(wildcard $(LOCAL_PATH)/*.apk))
+#manager_apk := $(patsubst $(LOCAL_PATH)/%,%,$(wildcard $(LOCAL_PATH)/*.apk))
+manager_apk := $(shell $(LOCAL_PATH)/loadapks.sh)
 
 $(foreach f,$(manager_apk), \
   $(eval include $(CLEAR_VARS)) \
@@ -17,5 +17,6 @@ $(foreach f,$(manager_apk), \
   $(eval LOCAL_MODULE_PATH := $(TARGET_OUT)/preinstall) \
   $(eval LOCAL_SRC_FILES   := $(f)) \
   $(eval include $(BUILD_PREBUILT)) \
+  $(eval ALL_DEFAULT_INSTALLED_MODULES += $(f)) \
 )
 

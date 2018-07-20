@@ -92,11 +92,6 @@ PRODUCT_COPY_FILES += \
     packages/apps/OtoFileManager/sea.tar.bz:$(PRODUCT_OUT)/system/opt/sea.tar.bz
 ##  packages/apps/Printer/component_printer.tar.gz:$(PRODUCT_OUT)/system/opt/component_printer.tar.gz \
 
-#Third Part Apps
-PRODUCT_PACKAGES += \
-    $(shell $(LOCAL_PATH)/preinstall/loadapks.sh)
-#    $(patsubst $(LOCAL_PATH)/preinstall/%,%,$(wildcard $(LOCAL_PATH)/preinstall/*.apk))
-
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_CHARACTERISTICS := tablet
