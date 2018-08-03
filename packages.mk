@@ -17,6 +17,7 @@
 # Common packages for Android-x86 platform.
 
 PRODUCT_PACKAGES := \
+    AnalyticsService \
     BasicSmsReceiver \
     Development \
     Galaxy4 \
