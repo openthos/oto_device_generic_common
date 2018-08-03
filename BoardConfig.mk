@@ -10,10 +10,7 @@ BOARD_HAVE_BLUETOOTH_LINUX := true
 
 BOARD_USE_LEGACY_UI := true
 
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1610612736
-BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := squashfs
-BOARD_SYSTEMIMAGE_SQUASHFS_COMPRESSOR := gzip
-#TARGET_USERIMAGES_SPARSE_SQUASHFS_DISABLED := true
+BOARD_SYSTEMIMAGE_PARTITION_SIZE = $(if $(MKSQUASHFS),0,1610612736)
 
 # customize the malloced address to be 16-byte aligned
 BOARD_MALLOC_ALIGNMENT := 16
@@ -79,7 +76,7 @@ ifneq ($(strip $(BOARD_GPU_DRIVERS)),)
 TARGET_HARDWARE_3D := true
 endif
 
-BOARD_KERNEL_CMDLINE := root=/dev/ram0 androidboot.selinux=permissive $(if $(filter true,$(TARGET_USES_64_BIT_BINDER)),,vmalloc=192M)
+BOARD_KERNEL_CMDLINE := root=/dev/ram0 androidboot.selinux=permissive $(if $(filter x86_64,$(TARGET_ARCH) $(TARGET_KERNEL_ARCH)),,vmalloc=192M)
 TARGET_KERNEL_DIFFCONFIG := device/generic/common/selinux_diffconfig
 
 COMPATIBILITY_ENHANCEMENT_PACKAGE := true
@@ -87,3 +84,6 @@ PRC_COMPATIBILITY_PACKAGE := true
 ZIP_OPTIMIZATION_NO_INTEGRITY := true
 
 DEVICE_MANIFEST_FILE := device/generic/common/manifest.xml
+
+BOARD_SEPOLICY_DIRS += device/generic/common/sepolicy \
+                       system/bt/vendor_libs/linux/sepolicy \
