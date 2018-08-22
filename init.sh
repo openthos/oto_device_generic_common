@@ -379,7 +379,8 @@ function do_bootcomplete()
 	done
 
 	#disable app
-	/system/bin/pm disable com.android.browser
+	pm disable com.android.browser
+	[ "`getprop ro.build.type`" = "user" -a -z "`ls /data/app/com.android.vending-* 2> /dev/null`" ] && pm disable com.android.vending
 }
 
 function do_hci()
