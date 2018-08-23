@@ -380,7 +380,7 @@ function do_bootcomplete()
 
 	#disable app
 	pm disable com.android.browser
-	[ "`getprop ro.build.type`" = "user" -a -z "`ls /data/app/com.android.vending-* 2> /dev/null`" ] && pm disable com.android.vending
+	[ "`getprop ro.build.type`" = "user" ] && pm path com.android.vending | grep -q /system && sleep 5 && pm disable com.android.vending
 }
 
 function do_hci()
