@@ -12,5 +12,10 @@ PRODUCT_PACKAGES := \
     gralloc.drm     \
     libGLES_mesa
 
+PRODUCT_PACKAGES += \
+    libEGL_swiftshader \
+    libGLESv1_CM_swiftshader \
+    libGLESv2_swiftshader \
+
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.opengles.version = 196608
