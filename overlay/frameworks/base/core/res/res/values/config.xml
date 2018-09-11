@@ -93,7 +93,7 @@
 
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
-    <bool name="config_showNavigationBar">true</bool>
+    <bool name="config_showNavigationBar">false</bool>
 
     <!--  Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">8</integer>
@@ -122,5 +122,5 @@
          1 - Nav bar is always translucent when the freeform stack is visible, otherwise always
          opaque.
          -->
-    <integer name="config_navBarOpacityMode">1</integer>
+    <integer name="config_navBarOpacityMode">0</integer>
 </resources>
