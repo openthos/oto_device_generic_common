@@ -115,3 +115,5 @@ $(if $(filter user,$(TARGET_BUILD_VARIANT)),,$(call inherit-product-if-exists,ve
 
 # Get native bridge settings
 $(call inherit-product-if-exists,$(LOCAL_PATH)/nativebridge/nativebridge.mk)
+
+$(call inherit-product,$(if $(wildcard $(PRODUCT_DIR)packages.mk),$(PRODUCT_DIR),$(LOCAL_PATH)/)packages.mk)

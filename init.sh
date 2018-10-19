@@ -38,13 +38,10 @@ function init_hal_audio()
 		VirtualBox*|Bochs*)
 			[ -d /proc/asound/card0 ] || modprobe snd-sb16 isapnp=0 irq=5
 			;;
-		*)
+		TS10*)
+			set_prop_if_empty hal.audio.out pcmC0D2p
 			;;
 	esac
-
-	if grep -qi "IntelHDMI" /proc/asound/card0/id; then
-		[ -d /proc/asound/card1 ] || set_property ro.hardware.audio.primary hdmi
-	fi
 }
 
 function init_hal_bluetooth()
@@ -55,6 +52,9 @@ function init_hal_bluetooth()
 	done
 
 	case "$PRODUCT" in
+		T100TAF)
+			set_property bluetooth.interface hci1
+			;;
 		T10*TA|M80TA|HP*Omni*)
 			BTUART_PORT=/dev/ttyS1
 			set_property hal.bluetooth.uart.proto bcm
@@ -115,10 +115,8 @@ function set_drm_mode()
 		ET1602*)
 			drm_mode=1366x768
 			;;
-		VMware*)
-			[ -n "$video" ] && drm_mode=$video
-			;;
 		*)
+			[ -n "$video" ] && drm_mode=$video
 			;;
 	esac
 
@@ -127,6 +125,8 @@ function set_drm_mode()
 
 function init_uvesafb()
 {
+	UVESA_MODE=${UVESA_MODE:-${video%@*}}
+
 	case "$PRODUCT" in
 		ET2002*)
 			UVESA_MODE=${UVESA_MODE:-1600x900}
@@ -145,8 +145,8 @@ function init_hal_gralloc()
 			if [ "$HWACCEL" != "0" ]; then
 				set_property ro.hardware.hwcomposer drm
 				set_property ro.hardware.gralloc gbm
+				set_property debug.drm.mode.force ${video:-1280x800}
 			fi
-			set_prop_if_empty sleep.state none
 			;;
 		0*inteldrmfb|0*radeondrmfb|0*nouveaufb|0*svgadrmfb|0*amdgpudrmfb)
 			if [ "$HWACCEL" != "0" ]; then
@@ -183,7 +183,7 @@ function init_hal_power()
 
 	# TODO
 	case "$PRODUCT" in
-		HP*Omni*|OEMB|Surface*3|T10*TA)
+		HP*Omni*|OEMB|Standard*PC*|Surface*3|T10*TA)
 			set_prop_if_empty sleep.state none
 			;;
 		*)
@@ -267,7 +267,7 @@ function init_hal_sensors()
 		*ST70416-6*)
 			set_property ro.iio.accel.order 102
 			;;
-		*T10*TA*|*pnEZpad*)
+		*T*0*TA*|*pnEZpad*)
 			set_property ro.iio.accel.y.opt_scale -1
 			;;
 		*)
