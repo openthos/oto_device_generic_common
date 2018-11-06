@@ -86,8 +86,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     bootable/newinstaller/replace/bootanimation.zip:$(PRODUCT_OUT)/system/media/bootanimation.zip \
-    $(LOCAL_PATH)/prebuilt-app/Fennec/fennec_initdata.tar.bz2:$(PRODUCT_OUT)/system/opt/fennec_initdata.tar.bz2 \
-    packages/apps/OtoFileManager/sea.tar.bz:$(PRODUCT_OUT)/system/opt/sea.tar.bz
+    $(LOCAL_PATH)/prebuilt-app/Fennec/fennec_initdata.tar.bz2:$(PRODUCT_OUT)/system/opt/fennec_initdata.tar.bz2
+##  packages/apps/OtoFileManager/sea.tar.bz:$(PRODUCT_OUT)/system/opt/sea.tar.bz
 ##  packages/apps/Printer/component_printer.tar.gz:$(PRODUCT_OUT)/system/opt/component_printer.tar.gz \
 
 PRODUCT_TAGS += dalvik.gc.type-precise
