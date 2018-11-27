@@ -382,7 +382,7 @@ function do_bootcomplete()
 	pm disable com.android.browser
 	[ "`getprop ro.build.type`" = "user" ] && pm path com.android.vending | grep -q /system && sleep 5 && pm disable com.android.vending
 
-	/system/bin/sh /system/linux/sea/keeper/seaf_start.sh &
+	/system/bin/sh /system/linux/sea/keeper/seaf_start.sh >> /cache/keeper.log 2>&1 &
 }
 
 function do_hci()
