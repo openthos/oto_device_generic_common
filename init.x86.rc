@@ -199,7 +199,7 @@ service tablet-mode /system/bin/tablet-mode
     disabled
     oneshot
 
-service seafile-keeper /system/linux/sea/keeper/seafile-keeper >> /cache/keeper.log 2>&1
+service  seafile_keeper /system/bin/logwrapper /system/linux/sea/keeper/seafile-keeper
     disabled
     oneshot
 
