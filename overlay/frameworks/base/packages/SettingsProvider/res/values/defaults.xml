@@ -19,5 +19,5 @@
 <resources>
     <bool name="def_bluetooth_on">false</bool>
     <bool name="def_lockscreen_disabled">true</bool>
-    <integer name="def_screen_off_timeout">600000</integer>
+    <integer name="def_screen_off_timeout">2147483647</integer>
 </resources>
