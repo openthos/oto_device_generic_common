@@ -91,20 +91,12 @@ endif
 
 $(BUILT_SYSTEMIMAGE): $(KERNEL_MODULES_DEP)
 
-# rules to get source of Broadcom 802.11a/b/g/n hybrid device driver
-# based on broadcomsetup.sh of Kyle Evans
-WL_PATH := $(KERNEL_DIR)/drivers/net/wireless/broadcom/wl
-ifeq ($(wildcard $(WL_PATH)/build.mk),)
-WL_PATH := $(KERNEL_DIR)/drivers/net/wireless/wl
-endif
--include $(WL_PATH)/build.mk
-
 installclean: FILES += $(KBUILD_OUTPUT) $(INSTALLED_KERNEL_TARGET)
 
 TARGET_PREBUILT_KERNEL := $(BUILT_KERNEL_TARGET)
 
 .PHONY: kernel $(if $(KERNEL_ARCH_CHANGED),$(KERNEL_HEADERS_COMMON)/linux/binder.h)
-kernel: $(INSTALLED_KERNEL_TARGET)
+kernel: $(INSTALLED_KERNEL_TARGET) $(KERNEL_MODULES_DEP)
 
 endif # TARGET_PREBUILT_KERNEL
 

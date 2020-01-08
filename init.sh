@@ -178,15 +178,16 @@ function init_hal_gralloc()
 	[ "$VULKAN" = "1" ] && GRALLOC=gbm
 
 	case "$(cat /proc/fb | head -1)" in
-		*virtiodrmfb)
+		*virtiodrmfb|*DRM*emulated)
 			if [ "$HWACCEL" != "0" ]; then
 				set_property ro.hardware.hwcomposer ${HWC:-drm}
 				set_property ro.hardware.gralloc ${GRALLOC:-gbm}
 				set_property debug.drm.mode.force ${video:-1280x800}
 			fi
 			;;
-		0*inteldrmfb|0*radeondrmfb|0*nouveaufb|0*svgadrmfb|0*amdgpudrmfb)
+		0*i915drmfb|0*inteldrmfb|0*radeondrmfb|0*nouveau*|0*svgadrmfb|0*amdgpudrmfb)
 			if [ "$HWACCEL" != "0" ]; then
+				set_property ro.hardware.hwcomposer ${HWC:-}
 				set_property ro.hardware.gralloc ${GRALLOC:-drm}
 				set_drm_mode
 			fi
@@ -210,7 +211,7 @@ function init_hal_hwcomposer()
 function init_hal_vulkan()
 {
 	case "$(cat /proc/fb | head -1)" in
-		0*inteldrmfb)
+		0*i915drmfb|0*inteldrmfb)
 			set_property ro.hardware.vulkan android-x86
 			;;
 		0*amdgpudrmfb)
@@ -311,9 +312,13 @@ function init_hal_sensors()
 			hal_sensors=hdaps
 			;;
 		*LINX1010B*)
+			set_property ro.iio.accel.x.opt_scale -1
 			set_property ro.iio.accel.z.opt_scale -1
+			;;
+		*i7-WN*)
+			set_property ro.iio.accel.quirks no-trig
 			;&
-		*i7Stylus*|*M80TA*)
+		*i7Stylus*)
 			set_property ro.iio.accel.x.opt_scale -1
 			;;
 		*LenovoMIIX320*|*ONDATablet*)
@@ -321,13 +326,16 @@ function init_hal_sensors()
 			set_property ro.iio.accel.x.opt_scale -1
 			set_property ro.iio.accel.y.opt_scale -1
 			;;
+		*SP111-33*)
+			set_property ro.iio.accel.quirks no-trig
+			;&
 		*ST70416-6*)
 			set_property ro.iio.accel.order 102
 			;;
 		*e-tabPro*|*pnEZpad*)
 			set_property ro.iio.accel.quirks no-trig
 			;&
-		*T*0*TA*)
+		*T*0*TA*|*M80TA*)
 			set_property ro.iio.accel.y.opt_scale -1
 			;;
 		*)
